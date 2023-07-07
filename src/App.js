@@ -6,7 +6,7 @@ import Photos from "./Photos/Photos";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="hw26">
       <Routes>
         <Route path="/" element={<UserList />} />
         <Route path="/albums/:userId" element={<Albums />} />
