@@ -1,0 +1,21 @@
+.photos-list {
+  list-style: none;
+  padding: 0;
+}
+
+.photos-list-item {
+  margin-bottom: 1rem;
+}
+
+.photo-title {
+  font-weight: bold;
+}
+
+.photo-link {
+  text-decoration: none;
+}
+
+.photo-image {
+  max-width: 100%;
+  height: auto;
+}

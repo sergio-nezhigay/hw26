@@ -1,0 +1,18 @@
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list-item {
+  margin-bottom: 1rem;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-albums-link {
+  text-decoration: none;
+  color: blue;
+  margin-left: 0.5rem;
+}

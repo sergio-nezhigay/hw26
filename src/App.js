@@ -1,19 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import UserList from "./UserList";
-import Albums from "./Albums";
-import Photos from "./Photos";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import UserList from "./UserList/UserList";
+import Albums from "./Albums/Albums";
+import Photos from "./Photos/Photos";
 
-const App = () => {
+export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<UserList />} />
-        <Route path="/albums" element={<Albums />} />
-        <Route path="/photos" element={<Photos />} />
+        <Route path="/albums/:userId" element={<Albums />} />
+        <Route path="/photos/:albumId" element={<Photos />} />
       </Routes>
     </Router>
   );
-};
-
-export default App;
+}
