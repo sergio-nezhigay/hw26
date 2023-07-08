@@ -16,20 +16,20 @@ export default function Albums() {
   }, [userId]);
 
   return (
-    <>
+    <div className="container">
       <h1>Albums List</h1>
       <ul className="albums-list">
-        {albums.map((album) => (
-          <li key={album.id} className="albums-list-item">
+        {albums.map(({ id, title }) => (
+          <li key={id} className="albums-list-item">
             <div>
-              <span className="album-title">{album.title}</span>
+              <span className="album-title">{title}</span>
             </div>
-            <Link to={`/photos/${album.id}`} className="album-photos-link">
+            <Link to={`/photos/${id}`} className="album-photos-link">
               Photos
             </Link>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

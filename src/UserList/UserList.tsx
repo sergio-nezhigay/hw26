@@ -15,20 +15,20 @@ export default function UserList() {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <h1>Users List.</h1>
       <ul className="user-list">
-        {users.map((user) => (
-          <li key={user.id} className="user-list-item">
+        {users.map(({ id, name }) => (
+          <li key={id} className="user-list-item">
             <div>
-              <span className="user-name">{user.name}</span>
+              <span className="user-name">{name}</span>
             </div>
-            <Link to={`/albums/${user.id}`} className="user-albums-link">
+            <Link to={`/albums/${id}`} className="user-albums-link">
               Albums
             </Link>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

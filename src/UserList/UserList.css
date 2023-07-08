@@ -1,10 +1,17 @@
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .user-list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
 .user-list-item {
   margin-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 0.5rem;
 }
 
 .user-name {

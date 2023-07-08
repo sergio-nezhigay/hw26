@@ -1,6 +1,10 @@
 .photos-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .photos-list-item {
@@ -9,10 +13,20 @@
 
 .photo-title {
   font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
 }
 
 .photo-link {
   text-decoration: none;
+
+  display: flex;
+  width: 200px;
+  flex-direction: column;
 }
 
 .photo-image {

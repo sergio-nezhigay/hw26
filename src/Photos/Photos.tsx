@@ -19,22 +19,18 @@ export default function Photos() {
     <>
       <h1>Photos List</h1>
       <ul className="photos-list">
-        {photos.map((photo) => (
-          <li key={photo.id} className="photos-list-item">
-            <div>
-              <span className="photo-title">{photo.title}</span>
-            </div>
+        {photos.map(({ id, title, url, thumbnailUrl }) => (
+          <li key={id} className="photos-list-item">
             <Link
-              to={photo.url}
+              to={url}
               target="_blank"
               rel="noreferrer"
               className="photo-link"
             >
-              <img
-                src={photo.thumbnailUrl}
-                alt={photo.title}
-                className="photo-image"
-              />
+              <img src={thumbnailUrl} alt={title} className="photo-image" />
+              <div>
+                <span className="photo-title">{title}</span>
+              </div>
             </Link>
           </li>
         ))}
